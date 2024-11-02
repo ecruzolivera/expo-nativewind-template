@@ -2,7 +2,6 @@ import React from "react"
 import FontAwesome from "@expo/vector-icons/FontAwesome"
 import { Link, Tabs } from "expo-router"
 import { Pressable } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
 
 import Colors from "@/src/constants/Colors"
 import { useColorScheme } from "@/src/components/useColorScheme"
