@@ -1,9 +1,11 @@
+import { api } from "./api/api"
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { configureStore } from "@reduxjs/toolkit"
 import { useDispatch, useSelector } from "react-redux"
 import userSlice from "@/components/users/userSlice"
 import { listenerMiddleware } from "./listenerMiddleware"
-import { api } from "./api"
+
+console.log("🔵 store module loading...")
 
 export const store = configureStore({
   reducer: {

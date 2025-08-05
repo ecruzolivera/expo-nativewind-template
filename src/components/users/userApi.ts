@@ -1,4 +1,6 @@
-import { api } from "@/store/api"
+import { api } from "@/store/api/api"
+
+console.log(" user module loading...")
 
 export type User = {
   id: number

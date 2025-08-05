@@ -6,10 +6,10 @@ import {
   FetchBaseQueryError,
 } from "@reduxjs/toolkit/query/react"
 import { Mutex } from "async-mutex"
-import { auth0RefreshToken } from "./auth0"
 import { type RootState } from "@/store/store"
 import { delay } from "@/utils/delay"
-import { userLogout } from "@/components/users"
+import { userLogout } from "@/components/users/userSlice"
+console.log(" api module loading...")
 
 const refreshMutex = new Mutex()
 
@@ -37,8 +37,9 @@ const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
   console.log(`[CloudApi] ${method} ${url}`)
 
   const state = api.getState() as RootState
-  const accessToken = state.users.auth0Tokens?.accessToken
-  const refreshToken = state.users.auth0Tokens?.refreshToken
+  //TODO: tokens from where?
+  const accessToken = undefined
+  const refreshToken = undefined
 
   // Initial request
   let result = await createBaseQuery(accessToken)(args, api, extraOptions)
@@ -54,7 +55,7 @@ const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
         while (refreshCounter++ <= 3) {
           try {
             console.warn("[CloudApi] Token expired. Attempting refresh...", refreshCounter)
-            tokens = await auth0RefreshToken(refreshToken)
+            // tokens = await auth0RefreshToken(refreshToken)
             if (tokens?.accessToken) {
               break // stop refreshing
             }
