@@ -2,9 +2,10 @@
 
 This is a starter template for building modern, performant, and responsive cross-platform apps using:
 
-- 🧭 [**Expo Router**](https://expo.github.io/router/docs) (v5) – file-based routing
-- 💨 [**NativeWind**](https://www.nativewind.dev) – TailwindCSS styling for React Native
-- ⚛️ [**Expo SDK 53**](https://docs.expo.dev) – powerful runtime and development tools
+- [**Expo Router**](https://expo.github.io/router/docs) (v5) – file-based routing
+- [**NativeWind**](https://www.nativewind.dev) – TailwindCSS styling for React Native
+- [**Expo SDK 53**](https://docs.expo.dev) – powerful runtime and development tools
+- [**RTK Query**](https://redux-toolkit.js.org/rtk-query) – Data fetching
 - 🛠️ Preconfigured with ESLint, Prettier, TypeScript, and Tailwind plugins
 
 Supports **Android**, **iOS**, and **Web** out of the box.
@@ -31,7 +32,7 @@ npm start
 | `npm run web`       | Run app in browser via React Native for Web |
 | `npm run lint`      | Run ESLint using Expo config                |
 | `npm run lint:fix`  | Auto-fix linting issues                     |
-| `npm run build:web` | Export web build (static site)              |
+| `npm run build:web` | Export as a website                         |
 
 ## 📚 Helpful Links
 
