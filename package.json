@@ -7,9 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll",
     "lint": "expo lint",
-    "lint:fix": "npx eslint . --fix"
+    "lint:fix": "npx eslint . --fix",
+    "build:web": "expo expo export -p web"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
